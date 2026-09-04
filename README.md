@@ -1,49 +1,42 @@
-# Svelte + TS + Vite
+# Proyecto Cliente Web — Mesa de Ayuda
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Proyecto del Hilo Cliente (Aplicaciones para el Cliente Web), construido con Svelte + TypeScript + Vite, y conectado a Supabase como servicio de datos.
 
-## Recommended IDE Setup
+## Integrantes
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- Derek Josue Cedeño Soledispa
+- Henrry Josue Demera Pincay
 
-## Need an official Svelte framework?
+## Requisitos previos
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- Tener instalado [Node.js LTS](https://nodejs.org/).
 
-## Technical considerations
+## Cómo levantar el proyecto
 
-**Why use this over SvelteKit?**
+1. Clonar este repositorio:
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+git clone https://github.com/uleam-web-2026-2/clienteB-cede-o-soledispa.git
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+2. Entrar a la carpeta del proyecto:
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+cd clienteB-cede-o-soledispa
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+3. Instalar las dependencias:
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+npm install
 
-**Why include `.vscode/extensions.json`?**
+4. Levantar el servidor de desarrollo:
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+npm run dev
 
-**Why enable `allowJs` in the TS template?**
+5. Abrir en el navegador la URL que muestra la terminal (normalmente http://localhost:5173/).
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+Si el puerto 5173 está ocupado, Vite elige otro automáticamente y lo muestra en la terminal — no es un error.
 
-**Why is HMR not preserving my local component state?**
+## Referencia API Supabase
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+URL del proyecto: https://girjcgfpoomvhbujuprv.supabase.co/rest/v1/
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+## Notas técnicas del template (Vite + Svelte + TS)
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
-Referencia API supabase:
-https://girjcgfpoomvhbujuprv.supabase.co/rest/v1/
+Este proyecto fue generado con la plantilla oficial svelte-ts de Vite. Para más detalles sobre configuración avanzada (HMR, TypeScript, extensiones recomendadas de VS Code), consultar la [documentación oficial de Vite + Svelte](https://vitejs.dev/guide/).
