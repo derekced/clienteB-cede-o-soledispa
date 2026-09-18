@@ -1,0 +1,138 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #282321;
+  background: #faf6f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  line-height: 1.55;
+}
+
+a {
+  color: #7d2941;
+}
+
+.site-header,
+main,
+footer {
+  width: min(100% - 2rem, 62rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 2px solid #8a2e44;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #3f5a45;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  padding: 2.5rem 0 4rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h2 {
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #dcd2cd;
+  font-size: 1.45rem;
+}
+
+main > p {
+  color: #5c5350;
+}
+
+.tabla-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dcd2cd;
+  background: #fffdfc;
+}
+
+table {
+  width: 100%;
+  min-width: 46rem;
+  border-collapse: collapse;
+}
+
+caption {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: #5c5350;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dcd2cd;
+}
+
+thead th {
+  color: #fff;
+  background: #3f5a45;
+  font-size: 0.92rem;
+}
+
+tbody th {
+  color: #7d2941;
+}
+
+footer {
+  padding: 1.25rem 0 2.5rem;
+  border-top: 1px solid #dcd2cd;
+  color: #5c5350;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 600px) {
+  .site-header,
+  main,
+  footer {
+    width: min(100% - 1.25rem, 62rem);
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
