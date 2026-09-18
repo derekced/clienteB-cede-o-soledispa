@@ -1,7 +1,7 @@
 # Nuestro negocio
 
 Negocio: Roses Lolas, florería con armado de ramos a pedido.
-Video de Starter Story: pendiente de completar con el enlace de referencia usado por la pareja.
+Video de Starter Story: https://the-little-flowershop.co.uk/product-category/bouquet-builder/
 Como lo adaptamos a Ecuador: se consideran entregas locales, pagos disponibles en Ecuador y coordinación de horarios con la florista.
 
 ## Las dos entidades
@@ -27,5 +27,4 @@ La pregunta que responde: ¿Qué ramos tengo que armar hoy, en qué orden, y cu�
 
 ## Pendientes
 
-- Completar el enlace exacto del video de Starter Story usado como referencia.
 - Confirmar si el cliente también puede cancelar un pedido en estado confirmado.
