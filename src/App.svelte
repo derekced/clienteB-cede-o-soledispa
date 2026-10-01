@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import Formulario from './Formulario.svelte'
+  import logo from './assets/Roses Lolas logo.jpeg'
 
   type Order = {
     number: number
@@ -32,10 +34,28 @@
     const delivery = new Date(`${date}T${time}`)
     return `${delivery.toLocaleDateString('es-EC', { day: 'numeric', month: 'short' })} · ${time}`
   }
+
+  onMount(() => {
+    const syncPointer = (event: PointerEvent) => {
+      document.querySelectorAll<HTMLElement>('[data-glow]').forEach((card) => {
+        const bounds = card.getBoundingClientRect()
+        card.style.setProperty('--x', (event.clientX - bounds.left).toFixed(2))
+        card.style.setProperty('--y', (event.clientY - bounds.top).toFixed(2))
+        card.style.setProperty('--xp', (event.clientX / window.innerWidth).toFixed(2))
+        card.style.setProperty('--yp', (event.clientY / window.innerHeight).toFixed(2))
+      })
+    }
+
+    document.addEventListener('pointermove', syncPointer)
+    return () => document.removeEventListener('pointermove', syncPointer)
+  })
 </script>
 
 <header class="site-header">
-  <p class="brand"><strong>Roses Lolas</strong></p>
+  <a class="brand" href="#pedidos">
+    <img src={logo} alt="" />
+    <strong>Roses Lolas</strong>
+  </a>
   <nav aria-label="Navegación principal">
     <ul>
       <li><a href="#pedidos">Pedidos</a></li>
@@ -45,10 +65,15 @@
 </header>
 
 <main>
-  <h1>Pedidos por preparar</h1>
-  <p>Florista: pedidos ordenados por la hora de entrega comprometida.</p>
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Panel de trabajo</p>
+      <h1>Pedidos por preparar</h1>
+    </div>
+    <p>Florista: pedidos ordenados por la hora de entrega comprometida.</p>
+  </div>
 
-  <section id="pedidos" aria-labelledby="titulo-hoy">
+  <section id="pedidos" aria-labelledby="titulo-hoy" data-glow class="spotlight-card">
     <h2 id="titulo-hoy">Para hoy</h2>
     <div class="tabla-scroll">
       <table>
@@ -69,7 +94,7 @@
               <td><time datetime={`${order.deliveryDate}T${order.deliveryTime}`}>{formatDelivery(order.deliveryDate, order.deliveryTime)}</time></td>
               <td>{order.bouquetSize} · {order.flowers}</td>
               <td>{order.recipient}</td>
-              <td>{order.status}</td>
+                <td><span class="status-badge">{order.status}</span></td>
             </tr>
           {/each}
         </tbody>

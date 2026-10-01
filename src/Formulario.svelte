@@ -1,4 +1,4 @@
-<section id="nuevo-pedido" class="form-section" aria-labelledby="titulo-formulario">
+<section id="nuevo-pedido" class="form-section spotlight-card" data-glow aria-labelledby="titulo-formulario">
   <div class="section-heading">
     <div>
       <p class="eyebrow">Cliente comprador</p>

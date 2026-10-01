@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Roses Lolas · Hito 1</title>
+  <style>
+    @page { size: 13.333in 7.5in; margin: 0; }
+    :root { --ink: #25333a; --muted: #627078; --green: #3f5a45; --rose: #7d2941; --pale: #eef3ee; --line: #cbd6d0; --cream: #fff8e6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: #dfe5e1; font-family: Georgia, 'Times New Roman', serif; }
+    .slide { position: relative; width: 13.333in; height: 7.5in; padding: .55in .72in .48in; overflow: hidden; background: #fffdfc; page-break-after: always; }
+    .slide:last-child { page-break-after: auto; }
+    .topline { display: flex; justify-content: space-between; align-items: baseline; color: var(--muted); font-size: 14px; }
+    .team { color: var(--rose); font-weight: bold; }
+    h1 { margin: .2in 0 .08in; color: var(--green); font-size: 38px; line-height: 1.05; }
+    h2 { margin: 0 0 .14in; color: var(--green); font-size: 21px; }
+    p { margin: 0 0 .12in; line-height: 1.35; }
+    .subtitle { font-size: 19px; color: var(--muted); max-width: 8.4in; }
+    .rule { height: 3px; margin: .2in 0 .24in; background: var(--rose); }
+    .columns { display: grid; grid-template-columns: 1.55fr .9fr; gap: .28in; }
+    .panel { padding: .18in .2in; border: 1px solid var(--line); background: var(--pale); }
+    .panel.cream { background: var(--cream); border-color: #e6d59d; }
+    .panel strong, .label { color: var(--green); }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: .13in; margin-top: .16in; }
+    .fact { padding: .13in; border-left: 4px solid var(--rose); background: #f8f4f1; }
+    .fact b { display: block; margin-bottom: 3px; color: var(--rose); font-size: 14px; }
+    .checklist { margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 1.5; }
+    .checklist li::before { content: '☑'; margin-right: 7px; color: var(--green); font-weight: bold; }
+    .foot { position: absolute; bottom: .22in; left: .72in; right: .72in; display: flex; justify-content: space-between; padding-top: .1in; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .restriction { display: grid; grid-template-columns: .9fr 1fr; gap: .12in; align-items: center; margin-bottom: .12in; }
+    .restriction div { padding: .13in .16in; background: var(--pale); }
+    .arrow { text-align: center; color: var(--rose); font-size: 22px; }
+    .change { margin-top: .18in; padding: .15in .18in; border: 2px solid var(--green); background: #fff; }
+    .change b { display: block; margin-bottom: 4px; color: var(--rose); }
+    .model-grid { display: grid; grid-template-columns: 1.25fr .95fr .9fr; gap: .14in; }
+    .entity { border: 1px solid var(--line); background: #fff; }
+    .entity h3 { margin: 0; padding: .08in .12in; color: #fff; background: var(--green); font-size: 15px; }
+    .entity p { padding: .08in .12in; margin: 0; font-size: 13px; line-height: 1.35; }
+    .relations { margin-top: .14in; font-size: 13px; line-height: 1.35; }
+    .states { display: grid; gap: .08in; align-content: start; }
+    .state { padding: .11in; border: 1px solid var(--green); background: #f4f7f3; text-align: center; font-weight: bold; }
+    .state.initial { color: #fff; background: var(--green); }
+    .transition { text-align: center; color: var(--rose); font-size: 12px; }
+    .prohibited { margin-top: .12in; color: var(--rose); font-size: 12px; line-height: 1.25; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: .08in .1in; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: #fff; background: var(--green); }
+    tbody tr:nth-child(even) { background: #f1f5f1; }
+    .views { margin-top: .17in; padding-left: .18in; font-size: 14px; line-height: 1.45; }
+    .views li { margin-bottom: 3px; }
+    .screenshot { padding: .1in; border: 1px solid var(--line); background: #fff; }
+    .screenshot h3 { margin: 0 0 .08in; padding: .07in .1in; color: #fff; background: var(--green); font-size: 13px; }
+    .screenshot table { font-family: Arial, sans-serif; font-size: 10px; }
+    .screenshot th, .screenshot td { padding: 5px; }
+    .status { font-weight: bold; }
+    a { color: var(--rose); }
+    @media screen { .slide { margin: 20px auto; box-shadow: 0 7px 24px #0002; } }
+  </style>
+</head>
+<body>
+  <section class="slide">
+    <div class="topline"><span>Proyecto autónomo · Hito 1</span><span class="team">Derek Cedeño · Henrry Demera</span></div>
+    <h1>Roses Lolas</h1>
+    <p class="subtitle">Florería local que arma ramos personalizados y coordina su entrega en Manta.</p>
+    <div class="rule"></div>
+    <div class="columns">
+      <div>
+        <div class="panel">
+          <h2>Negocio de referencia</h2>
+          <p><strong>The Little Flower Shop</strong> muestra un catálogo de ramos configurables: el cliente elige flores, follaje y complementos, paga y define la entrega.</p>
+          <p>Roses Lolas adapta ese modelo a pedidos locales, confirmación directa de la florista y cobertura por zonas.</p>
+          <p><strong>Fuente:</strong> <a href="https://the-little-flowershop.co.uk/product-category/bouquet-builder/">Bouquet Builder</a></p>
+        </div>
+        <div class="facts">
+          <div class="fact"><b>Qué vende y a quién</b>Ramos personalizados para personas que envían regalos o celebran una ocasión.</div>
+          <div class="fact"><b>Cómo cobra</b>Pago por transferencia, efectivo o tarjeta antes de preparar.</div>
+          <div class="fact"><b>Contraste</b><a href="https://news.google.com/search?q=%22Busy%20Bee%20Florist%20in%20Wisbech%20enters%20liquidation%22">Busy Bee Florist</a>: entró en liquidación tras siete años.</div>
+          <div class="fact"><b>Hipótesis</b>Costos fijos, desperdicio y baja demanda pudieron presionar el margen.</div>
+        </div>
+      </div>
+      <aside class="panel cream"><h2>Cumplimiento</h2><ul class="checklist"><li>Enlace al caso de referencia</li><li>Qué vende, a quién y cómo cobra</li><li>Contraste con enlace</li><li>Hipótesis de fondo</li><li><a href="https://github.com/derekced/clienteB-cede-o-soledispa/blob/main/docs/hito1_ficha_del_negocio.md#1-negocio-de-referencia">Ficha: secciones 1 y 2</a></li></ul></aside>
+    </div>
+    <div class="foot"><span>El negocio · caso y contraste</span><span>Roses Lolas · 1</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline"><span>Proyecto autónomo · Hito 1</span><span class="team">Derek Cedeño · Henrry Demera</span></div>
+    <h1>Adaptación al Ecuador</h1>
+    <p class="subtitle">El flujo cambia porque el pedido real depende del pago, la zona y la disponibilidad.</p>
+    <div class="rule"></div>
+    <div class="columns">
+      <div>
+        <div class="restriction"><div><b>1 · Transferencia</b><br>El cliente envía comprobante.</div><div><span class="arrow">→</span> Pago por verificar antes de preparar.</div></div>
+        <div class="restriction"><div><b>2 · Facturación SRI</b><br>Se requieren datos del comprador.</div><div><span class="arrow">→</span> Cliente y pedido quedan separados.</div></div>
+        <div class="restriction"><div><b>3 · Entrega en Manta</b><br>La zona cambia tiempo y costo.</div><div><span class="arrow">→</span> La bandeja muestra zona y hora.</div></div>
+        <div class="restriction"><div><b>4 · Flores variables</b><br>La disponibilidad cambia por temporada.</div><div><span class="arrow">→</span> La florista confirma antes de armar.</div></div>
+        <div class="change"><b>Cambio en el modelo · restricción 1</b>Agregamos <strong>Pago por verificar</strong> entre Recibido y Confirmado. Así una transferencia no se interpreta como pago aprobado automáticamente.</div>
+      </div>
+      <aside class="panel cream"><h2>Cumplimiento</h2><ul class="checklist"><li>Tres restricciones concretas</li><li>Cada una tiene su efecto</li><li>Una cambió el modelo</li><li><a href="https://github.com/derekced/clienteB-cede-o-soledispa/blob/main/docs/hito1_ficha_del_negocio.md#3-adaptación-al-ecuador">Ficha: sección 3</a></li></ul></aside>
+    </div>
+    <div class="foot"><span>Adaptación al Ecuador</span><span>Roses Lolas · 2</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline"><span>Proyecto autónomo · Hito 1</span><span class="team">Derek Cedeño · Henrry Demera</span></div>
+    <h1>Modelo y estados</h1>
+    <p class="subtitle">Cinco entidades relacionadas · Pedido inicia en Recibido · la florista controla la preparación.</p>
+    <div class="rule"></div>
+    <div class="columns" style="grid-template-columns: 1.65fr .85fr;">
+      <div>
+        <div class="model-grid">
+          <div class="entity"><h3>Pedido</h3><p>numero · estado<br>clienteId · ramoId · creado</p></div>
+          <div class="entity"><h3>Cliente</h3><p>nombre · telefono<br>correo</p></div>
+          <div class="entity"><h3>Ramo</h3><p>tamano · flores<br>follaje · extras</p></div>
+          <div class="entity"><h3>Pago</h3><p>forma · estado<br>monto</p></div>
+          <div class="entity"><h3>Entrega</h3><p>fecha · hora<br>destinatario · zona</p></div>
+        </div>
+        <p class="relations"><strong>Relaciones:</strong> Cliente 1—N Pedido · Pedido 1—1 Ramo · Pedido 1—1 Pago · Pedido 1—1 Entrega.</p>
+      </div>
+      <div class="states"><div class="state initial">Recibido · inicial</div><div class="transition">florista verifica pago ↓</div><div class="state">Confirmado</div><div class="transition">inicia armado ↓</div><div class="state">En preparación</div><div class="transition">ramo terminado ↓</div><div class="state">Listo</div><div class="transition">entrega confirmada ↓</div><div class="state">Entregado</div><p class="prohibited"><strong>Prohibida:</strong> Entregado → En preparación. Si hay un problema, se registra una incidencia o un pedido nuevo.</p></div>
+    </div>
+    <div class="panel cream" style="margin-top: .16in; padding: .12in .18in;"><ul class="checklist" style="display:flex; gap:.25in;"><li>Cardinalidades</li><li>5 entidades</li><li>5 estados principales</li><li>Quién hace cada transición</li><li>Transición prohibida</li></ul></div>
+    <div class="foot"><span><a href="https://github.com/derekced/clienteB-cede-o-soledispa/blob/main/docs/hito1_ficha_del_negocio.md#4-modelo-de-datos">Ficha, sección 4</a> · <a href="https://github.com/derekced/clienteB-cede-o-soledispa/blob/main/docs/hito1_ficha_del_negocio.md#5-m%C3%A1quina-de-estados">Ficha, sección 5</a></span><span>Roses Lolas · 3</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topline"><span>Proyecto autónomo · Hito 1</span><span class="team">Derek Cedeño · Henrry Demera</span></div>
+    <h1>Roles y vistas</h1>
+    <p class="subtitle">La florista trabaja todos los pedidos; el cliente solo consulta y modifica los suyos.</p>
+    <div class="rule"></div>
+    <div class="columns" style="grid-template-columns: 1.05fr 1.2fr;">
+      <div>
+        <table><thead><tr><th>Acción</th><th>Cliente</th><th>Florista</th></tr></thead><tbody><tr><td>Ver pedidos</td><td>Solo los suyos</td><td>Todos</td></tr><tr><td>Crear pedido</td><td>Sí</td><td>No</td></tr><tr><td>Configurar ramo</td><td>Sus pedidos</td><td>No cambia lo solicitado</td></tr><tr><td>Cambiar estado</td><td>No</td><td>Todos</td></tr><tr><td>Marcar entrega</td><td>No</td><td>Todos</td></tr></tbody></table>
+        <ul class="views"><li>Mis pedidos · cliente</li><li>Nuevo pedido · cliente</li><li>Bandeja por preparar · florista</li><li>Detalle del pedido · ambos</li><li>Cambio de estado · florista</li></ul>
+      </div>
+      <div class="screenshot"><h3>Bandeja de pedidos por preparar · Florista</h3><img src="captura_listado.png" alt="Captura real del listado de pedidos por preparar de Roses Lolas"><p style="margin:.12in 0 0; font-size:12px;"><strong>Captura real de la vista maquetada:</strong> el estado se lee como palabra; el color solo acompaña.</p></div>
+    </div>
+    <aside class="panel cream" style="margin-top: .18in;"><h2>Cumplimiento</h2><ul class="checklist" style="display:flex; flex-wrap:wrap; gap:.04in .28in;"><li>Dos roles distintos</li><li>Alcance: todos / solo los suyos</li><li>Cinco vistas con rol</li><li>Listado con estado escrito</li><li><a href="https://github.com/derekced/clienteB-cede-o-soledispa/blob/main/docs/hito1_ficha_del_negocio.md#6-roles-y-permisos">Ficha, secciones 6 y 7</a></li></ul></aside>
+    <div class="foot"><span>La pregunta clave: qué no puede ver o hacer cada rol, y por qué</span><span>Roses Lolas · 4</span></div>
+  </section>
+</body>
+</html>
